@@ -1,9 +1,9 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.11.1
+  distribution_version: 0.16.1
   generator: "Rime::SwitcherSettings"
-  modified_time: "Tue Jun  5 12:55:24 2018"
-  rime_version: 1.3.0
+  modified_time: "Tue Jul 30 19:51:34 2024"
+  rime_version: 1.11.2
 patch:
   menu:
     alternative_select_keys: "0123456789" #重碼選擇鍵，如沒有寫-預設 ctrl+123456789\
@@ -13,15 +13,7 @@ patch:
     switch_key: {Caps_Lock: noop, Control_L: noop, Control_R: noop, Eisu_toggle: clear, Shift_L: clear, Shift_R: clear}
   schema_list:
     - schema: liur
-    - schema: luna_pinyin
-    - schema: luna_pinyin_simp
-    - schema: luna_pinyin_fluency
-    - schema: bopomofo
     - schema: bopomofo_tw
-    - schema: cangjie5
-    - schema: stroke
-    - schema: terra_pinyin
-    # - schema: liur_Trad
   switcher:
     abbreviate_options: false
     caption: "〔方案選單〕"
@@ -33,13 +25,7 @@ patch:
     # ↓ 即在輸入方案配置中設置enable_sentence: false）
     - { when: composing, accept: space, send: Escape }
     - { when: has_menu, accept: space, send: space }
-    # - { when: has_menu, accept: comma, send: comma }	#輸入,
-    # - { when: has_menu, accept: minus, send: minus }		# 輸入-
-    # - { when: has_menu, accept: equal, send: equal }		# 輸入=
     - { accept: period, send: period, when: has_menu }		# 輸入.
-    - { accept: "Control+period", toggle: simplification, when: always }	#進行簡繁切換
-    - { accept: "Control+apostrophe", toggle: liu_w2c, when: always }	#顯示同音字
-    - { accept: "Control+slash", toggle: extended_charset, when: always}
     - { accept: "Shift+space", toggle: full_shape, when: always}
     # Emacs style
     - { when: composing, accept: Control+p, send: Up }
@@ -59,3 +45,6 @@ patch:
     - { when: composing, accept: ISO_Left_Tab, send: Shift+Left }
     - { when: composing, accept: Shift+Tab, send: Shift+Left }
     - { when: composing, accept: Tab, send: Shift+Right }
+    # my control
+    - { when: composing, accept: Shift+less, send: Page_Up }
+    - { when: composing, accept: Shift+greater, send: Page_Down }
