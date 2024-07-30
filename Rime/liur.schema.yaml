@@ -92,7 +92,7 @@ translator:
   max_phrase_length: 10
   enable_completion: true
   comment_format:
-    - xform/^~(.+)$/>[$1]   #將提示碼改為較美觀的型式
+    - "xform/^~(.+)$/> $1 " #將提示碼改為較美觀的型式
   disable_user_dict_for_patterns:
     - "^[',.].*$"
   initial_quality: 1000
@@ -106,14 +106,14 @@ fixed:
 mkst:
   __include: /translator
   enable_sentence: true
-  prefix: ';'
+  prefix: ';;;'
   tips: "【造詞】"
   tag: mkst
   initial_quality: 10
 
 liurqry:
   __include: /translator
-  prefix: ";;"
+  prefix: "';"
   suffix: "'"
   tips: 【反查讀音】
   closing_tips: 【蝦米】
@@ -121,15 +121,14 @@ liurqry:
   tag: liurqry
 
 phonetic:
-  __include: /translator
   tag: phonetic
-  prefix: "';"
+  prefix: ";;"
   suffix: "'"
   dictionary: terra_pinyin
   prism: bopomofo_tw
-  preedit_format:	#menu反查之輸入法 顯示
+  preedit_format:	# 編輯區的顯示
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙ |"
-  comment_format:	#menu 提示 字碼 顯示
+  comment_format:	# 選單提示的顯示
     - "xlit|abcdefghijklmnopqrstuvwxyz[];',.|abcdefghijklmnopqrstuvwxyz[];',.|"
   tips: 【注音】
   closing_tips: 【蝦米】
@@ -138,7 +137,7 @@ phonetic:
 phoneticqry:
   __include: /phonetic
   tag: phoneticqry
-  prefix: "'';"
+  prefix: ";'"
   suffix: "'"
   tips: 【反查蝦米】
   closing_tips: 【蝦米】
@@ -199,10 +198,10 @@ recognizer:
     email: ^[a-z][-_.0-9a-z]*@.*$
     url: ^(www[.]|https?:|ftp:|mailto:).*$
     # 注音引導鍵
-    phonetic: "^';[1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/6347-]*'?$" # 「-」為「ㄦ」，移到最後面，讓正則可正確抓取
+    phonetic: "^;;[1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/6347-]*'?$" # 「-」為「ㄦ」，移到最後面，讓正則可正確抓取
     # 造詞引導鍵
-    mkst: "^;[a-z,.'`]*$"
+    mkst: "^;;;[a-z,.'`]*$"
     # 蝦米反查引導鍵
-    phoneticqry: "^'';[1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/6347-]*'?$"
+    phoneticqry: "^;'[1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/6347-]*'?$"
     # 注音反查引導鍵
-    liurqry: "^;;[a-z']*'?$"
+    liurqry: "^';[a-z']*'?$"

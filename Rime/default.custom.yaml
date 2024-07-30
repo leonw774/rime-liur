@@ -10,7 +10,7 @@ patch:
     page_size: 7	#選單 每頁 顯示 個數
   ascii_composer:
     good_old_caps_lock: true
-    switch_key: {Caps_Lock: noop, Control_L: noop, Control_R: noop, Eisu_toggle: clear, Shift_L: clear, Shift_R: clear}
+    switch_key: {Caps_Lock: commit_code, Control_L: noop, Control_R: noop, Eisu_toggle: clear, Shift_L: commit_code, Shift_R: noop}
   schema_list:
     - schema: liur
     - schema: bopomofo_tw
@@ -26,7 +26,7 @@ patch:
     - { when: composing, accept: space, send: Escape }
     - { when: has_menu, accept: space, send: space }
     - { accept: period, send: period, when: has_menu }		# 輸入.
-    - { accept: "Shift+space", toggle: full_shape, when: always}
+    - { accept: "Shift+space", toggle: full_shape, when: always }
     # Emacs style
     - { when: composing, accept: Control+p, send: Up }
     - { when: composing, accept: Control+n, send: Down }
