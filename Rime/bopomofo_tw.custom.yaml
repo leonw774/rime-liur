@@ -1,0 +1,4 @@
+patch:
+  speller/algebra/+:
+    # 加入這行讓`=`鍵也可以輸入一聲`
+    - 'derive/ /=/'

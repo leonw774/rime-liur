@@ -12,12 +12,16 @@ schema:
     蝦米-注音反查輸入法
   dependencies:
 
+menu:
+  alternative_select_keys: "0123456789" #重碼選擇鍵
+  page_size: 10
+
 switches:
   - name: ascii_mode
     reset: 0
     # states: [ 中文, 英文 ]
   - name: full_shape
-    # states: [ 半形, 全形 ]
+    states: [ 半形, 全形 ]
   - name: extended_charset
     states: [ 常用, 擴充字集 ]
     reset: 0
@@ -127,7 +131,8 @@ phonetic:
   dictionary: terra_pinyin
   prism: bopomofo_tw
   preedit_format:	# 編輯區的顯示
-    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙ |"
+    # 因為空白鍵為出字鍵，使用`=`鍵作為一聲
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-=6347'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙ |"
   comment_format:	# 選單提示的顯示
     - "xlit|abcdefghijklmnopqrstuvwxyz[];',.|abcdefghijklmnopqrstuvwxyz[];',.|"
   tips: 【注音】
@@ -198,10 +203,10 @@ recognizer:
     email: ^[a-z][-_.0-9a-z]*@.*$
     url: ^(www[.]|https?:|ftp:|mailto:).*$
     # 注音引導鍵
-    phonetic: "^;;[1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/6347-]*'?$" # 「-」為「ㄦ」，移到最後面，讓正則可正確抓取
+    phonetic: "^;;[1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/=6347-]*'?$" # 「-」為「ㄦ」，移到最後面，讓正則可正確抓取
     # 造詞引導鍵
     mkst: "^;;;[a-z,.'`]*$"
     # 蝦米反查引導鍵
-    phoneticqry: "^;'[1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/6347-]*'?$"
+    phoneticqry: "^;'[1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/=6347-]*'?$"
     # 注音反查引導鍵
     liurqry: "^';[a-z']*'?$"

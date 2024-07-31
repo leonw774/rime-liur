@@ -16,7 +16,7 @@
 >   - Caps Lock 開啟時禁用中文模式，在中文模式下開啟Caps Lock將切至英文模式並吐出編輯區裡的編碼
 >   - 預設開啟英文字典
 > - 預選項目數量上限為10
-> - 
+> - 注音模式現在可以入透過`=`鍵輸入一聲
 
 [blog好讀版](https://blog.typeart.cc/rime-liur/guide/)
 
