@@ -25,6 +25,8 @@ switches:
   - name: extended_charset
     states: [ 常用, 擴充字集 ]
     reset: 0
+  - name: simplification
+    states: [ 繁體, 简体 ]
   - name: zh_tw
     reset: 1
 
@@ -77,6 +79,9 @@ zh_tw:	#只針對拼音及注音反查進行台灣用語轉換
   option_name: zh_tw
   # tags: [ pinyin, phonetic ]
   tags: [ phonetic ]
+
+simplifier:
+  tips: all	# 簡化字模式下提示對應的傳統漢字
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz[];',."
