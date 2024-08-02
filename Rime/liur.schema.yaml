@@ -101,7 +101,7 @@ translator:
   max_phrase_length: 10
   enable_completion: true
   comment_format:
-    - "xform/^~(.+)$/> $1 " #將提示碼改為較美觀的型式
+    - "xform/^~(.+)$/$1 " #將提示碼改為較美觀的型式
   disable_user_dict_for_patterns:
     - "^[',.].*$"
   initial_quality: 1000

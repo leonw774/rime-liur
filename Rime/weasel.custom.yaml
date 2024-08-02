@@ -1,2 +1,3 @@
 patch:
-  "switches/@0/reset": 1	# 1=預設英文輸入，0=中文
+  style/horizontal: true  # 使用橫向侯選欄
+  "switches/@0/reset": 1
