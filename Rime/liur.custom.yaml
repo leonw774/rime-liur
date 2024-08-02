@@ -1,5 +1,5 @@
 patch:
-  # translator/enable_completion: true  #開啟連打
+  # translator/enable_sentence: true  #開啟連打
   # translator/enable_user_dict: true  #開啟用戶詞典詞頻調整
-  translator/enable_sentence: true  #打開逐碼提示碼
+  translator/enable_completion: true  #打開逐碼提示碼
   "switches/@0/reset": 1  # ascii mode 預設為開
