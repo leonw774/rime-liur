@@ -1,3 +1,2 @@
 patch:
-  style/horizontal: true  # 使用橫向侯選欄
   "switches/@0/reset": 1
