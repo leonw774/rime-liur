@@ -18,7 +18,7 @@ patch:
     abbreviate_options: false
     caption: "〔方案選單〕"
     fold_options: false
-    hotkeys: ["Control+grave", "Control+Shift+grave"]
+    hotkeys: ["Control+Shift+grave"]
   key_binder:
     bindings:
     # ↓ 以下2條爲空碼時按空格鍵清空輸入碼（首先需要關閉碼表輸入法連打，
