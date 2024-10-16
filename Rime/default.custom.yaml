@@ -1,8 +1,8 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.16.1
+  distribution_version: 0.16.3
   generator: "Rime::SwitcherSettings"
-  modified_time: "Tue Jul 30 19:51:34 2024"
+  modified_time: "Wed Oct 16 19:51:34 2024"
   rime_version: 1.11.2
 patch:
   menu:
@@ -14,11 +14,8 @@ patch:
   schema_list:
     - schema: liur
     - schema: bopomofo_tw
-  switcher:
-    abbreviate_options: false
-    caption: "〔方案選單〕"
-    fold_options: false
-    hotkeys: ["Control+Shift+grave"]
+  switcher/hotkeys:
+    - Control+Alt+grave
   key_binder:
     bindings:
     # ↓ 以下2條爲空碼時按空格鍵清空輸入碼（首先需要關閉碼表輸入法連打，
